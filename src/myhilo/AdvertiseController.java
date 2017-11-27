@@ -60,7 +60,7 @@ public class AdvertiseController implements Initializable {
         userMoneyShow = fileKeeps.getUserMoneyShow();
         password = fileKeeps.getPassword();
         
-        money = userMoneyShow.get(0)+500;
+        money = userMoneyShow.get(0)+5000;
     }
     public void setSaveStatus(){
         

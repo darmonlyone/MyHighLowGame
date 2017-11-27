@@ -277,7 +277,7 @@ public class MyCardGame extends javax.swing.JFrame {
         getContentPane().add(howMuchLostWin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 490, 140, 60));
 
         tooMuch.setBackground(new java.awt.Color(116, 158, 69));
-        tooMuch.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tooMuch.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         tooMuch.setForeground(new java.awt.Color(116, 158, 69));
         tooMuch.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tooMuch.setText("Not more than you money");

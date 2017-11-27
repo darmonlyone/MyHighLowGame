@@ -18,7 +18,7 @@ public class HowToPlayDiceGame extends javax.swing.JFrame {
         initComponents();
         
         setBackground(Color.BLACK);
-        setSize(900, 675);
+        setSize(1050, 726);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);

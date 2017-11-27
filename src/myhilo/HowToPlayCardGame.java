@@ -20,7 +20,7 @@ public class HowToPlayCardGame extends javax.swing.JFrame {
      */
     public HowToPlayCardGame() {
         setBackground(Color.BLACK);
-        setSize(1000, 537);
+        setSize(1200, 600);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);

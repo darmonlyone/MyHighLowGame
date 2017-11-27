@@ -35,6 +35,22 @@ public class StartForm extends javax.swing.JFrame {
     static List<String> userLoginShow;   
     FileLock file = new FileLock();
     private static boolean freeVideos = true;
+    
+    int i = 0 , j =0, veri =2, verj =1;
+    int  i2 =50 , i3 =100 , i4 =150, i5 =200;
+    int  j2 =10, veri2 =2, verj2 =1;
+    int  j3 =20, veri3 =2, verj3=1;
+    int  j4 =30, veri4 =2, verj4 =1;
+    int j5 =40, veri5 =2, verj5 =1;
+    
+    int x = 200,y =300,verX=1, verY=3;
+    int x2 = 100 , y2 = 127, verX2 = -2 , verY2 = 2;
+    int x3 = 899 , y3 = 421, verX3 = -2 , verY5 = 1;
+    int x4 = 700 , y5 = 432, verX4 = 1 , verY4 = 3;
+    int x5 = 200 , y6 = 456, verX5 = -3 , verY6 = 2;
+    int x6 = 648 , y4 = 249, verX6 = 4 , verY3 = 1;
+    int countter = 0;
+    
     public void fileOpen(){
         file.setUPMlog();
         file.setUPMAF();
@@ -54,7 +70,7 @@ public class StartForm extends javax.swing.JFrame {
 //        System.out.println(userLoginShow.get(0));
 }
     public StartForm() {
-                backGroundAnimetion();
+        backGroundAnimetion();
         backGroundAnimetion2();
         setSize(900, 500);
         this.setResizable(true);
@@ -140,13 +156,7 @@ public class StartForm extends javax.swing.JFrame {
         t5.start();
         
     }
-    int i = 0 , j =0, veri =2, verj =1;
-    int  i2 =50 , i3 =100 , i4 =150, i5 =200;
-    int  j2 =10, veri2 =2, verj2 =1;
-    int  j3 =20, veri3 =2, verj3=1;
-    int  j4 =30, veri4 =2, verj4 =1;
-    int j5 =40, veri5 =2, verj5 =1;
- 
+  
     
     public void backGroundAnimetion(){
 
@@ -253,13 +263,7 @@ public class StartForm extends javax.swing.JFrame {
     tm5.start();
     tm6.start();
  }
- int x = 200,y =300,verX=1, verY=3;
- int x2 = 100 , y2 = 127, verX2 = -2 , verY2 = 2;
- int x3 = 899 , y3 = 421, verX3 = -2 , verY5 = 1;
- int x4 = 700 , y5 = 432, verX4 = 1 , verY4 = 3;
- int x5 = 200 , y6 = 456, verX5 = -3 , verY6 = 2;
- int x6 = 648 , y4 = 249, verX6 = 4 , verY3 = 1;
- int countter = 0;
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -269,12 +273,6 @@ public class StartForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        dice6 = new javax.swing.JLabel();
-        dice5 = new javax.swing.JLabel();
-        dice4 = new javax.swing.JLabel();
-        dice3 = new javax.swing.JLabel();
-        dice2 = new javax.swing.JLabel();
-        dice1 = new javax.swing.JLabel();
         advertiseFree = new javax.swing.JLabel();
         freeMoneyText = new javax.swing.JTextField();
         diceGamePic = new javax.swing.JLabel();
@@ -291,19 +289,13 @@ public class StartForm extends javax.swing.JFrame {
         moneyPic = new javax.swing.JLabel();
         usShow = new javax.swing.JTextField();
         logoutBut = new javax.swing.JButton();
+        dice6 = new javax.swing.JLabel();
+        dice5 = new javax.swing.JLabel();
+        dice4 = new javax.swing.JLabel();
+        dice3 = new javax.swing.JLabel();
+        dice2 = new javax.swing.JLabel();
+        dice1 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
-
-        dice6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice6.png"))); // NOI18N
-
-        dice5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice5.png"))); // NOI18N
-
-        dice4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice4.png"))); // NOI18N
-
-        dice3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice3.png"))); // NOI18N
-
-        dice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice2.png"))); // NOI18N
-
-        dice1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice1.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -317,16 +309,16 @@ public class StartForm extends javax.swing.JFrame {
                 advertiseFreeMouseClicked(evt);
             }
         });
-        getContentPane().add(advertiseFree, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, -1, -1));
+        getContentPane().add(advertiseFree, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 70, -1));
 
         freeMoneyText.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         freeMoneyText.setForeground(new java.awt.Color(255, 0, 0));
         freeMoneyText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        freeMoneyText.setText("Free 500 ฿");
+        freeMoneyText.setText("Free 5000 ฿");
         freeMoneyText.setBorder(null);
         freeMoneyText.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         freeMoneyText.setFocusable(false);
-        getContentPane().add(freeMoneyText, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 100, -1));
+        getContentPane().add(freeMoneyText, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 90, -1));
 
         diceGamePic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageStart/DiceGame.png"))); // NOI18N
         getContentPane().add(diceGamePic, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 200, 140));
@@ -418,6 +410,24 @@ public class StartForm extends javax.swing.JFrame {
         });
         getContentPane().add(logoutBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 460, 80, 30));
 
+        dice6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice6.png"))); // NOI18N
+        getContentPane().add(dice6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        dice5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice5.png"))); // NOI18N
+        getContentPane().add(dice5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        dice4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice4.png"))); // NOI18N
+        getContentPane().add(dice4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        dice3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice3.png"))); // NOI18N
+        getContentPane().add(dice3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        dice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice2.png"))); // NOI18N
+        getContentPane().add(dice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        dice1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice1.png"))); // NOI18N
+        getContentPane().add(dice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageStart/BG.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -466,7 +476,7 @@ public class StartForm extends javax.swing.JFrame {
     private void advertiseFreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_advertiseFreeMouseClicked
         try {
             AdvertiseMain.main(null);
-            userMoneyShow.set(0,userMoneyShow.get(0)+500);
+            userMoneyShow.set(0,userMoneyShow.get(0)+5000);
         } catch (Exception e) {
             System.out.println(e);
         }

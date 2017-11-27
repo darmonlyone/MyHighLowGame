@@ -19,7 +19,7 @@ public class HowToUseGameDiceGame extends javax.swing.JFrame {
      */
     public HowToUseGameDiceGame() {
         setBackground(Color.BLACK);
-        setSize(900, 675);
+        setSize(1050, 726);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
