@@ -33,23 +33,15 @@ public class StartForm extends javax.swing.JFrame {
     static List<String> userLogin;
     static List<Integer> userMoneyShow; 
     static List<String> userLoginShow;   
-    FileLock file = new FileLock();
+    private FileLock file = new FileLock();
     private static boolean freeVideos = true;
-    
-    int i = 0 , j =0, veri =2, verj =1;
-    int  i2 =50 , i3 =100 , i4 =150, i5 =200;
-    int  j2 =10, veri2 =2, verj2 =1;
-    int  j3 =20, veri3 =2, verj3=1;
-    int  j4 =30, veri4 =2, verj4 =1;
-    int j5 =40, veri5 =2, verj5 =1;
-    
-    int x = 200,y =300,verX=1, verY=3;
-    int x2 = 100 , y2 = 127, verX2 = -2 , verY2 = 2;
-    int x3 = 899 , y3 = 421, verX3 = -2 , verY5 = 1;
-    int x4 = 700 , y5 = 432, verX4 = 1 , verY4 = 3;
-    int x5 = 200 , y6 = 456, verX5 = -3 , verY6 = 2;
-    int x6 = 648 , y4 = 249, verX6 = 4 , verY3 = 1;
-    int countter = 0;
+     
+    private int i = 0 , j =0, veri =2, verj =1;
+    private int  i2 =50 , i3 =100 , i4 =150, i5 =200;
+    private int  j2 =10, veri2 =2, verj2 =1;
+    private int  j3 =20, veri3 =2, verj3=1;
+    private int  j4 =30, veri4 =2, verj4 =1;
+    private int j5 =40, veri5 =2, verj5 =1;
     
     public void fileOpen(){
         file.setUPMlog();
@@ -70,7 +62,6 @@ public class StartForm extends javax.swing.JFrame {
 //        System.out.println(userLoginShow.get(0));
 }
     public StartForm() {
-        backGroundAnimetion();
         backGroundAnimetion2();
         setSize(900, 500);
         this.setResizable(true);
@@ -83,62 +74,51 @@ public class StartForm extends javax.swing.JFrame {
         
      }
     public void backGroundAnimetion2(){
+        
         Timer t1 = new Timer(15 , new ActionListener(){
         
                 public void actionPerformed(ActionEvent e ){
                     
+                    if(freeVideos && !userMoneyShow.isEmpty() && i == 160 ){
+                      if(userMoneyShow.get(0) <= 800){
+                          advertiseFree.setVisible(true);
+                          freeMoneyText.setVisible(true);
+                          freeVideos = false;
+                      }
+                    }
+                      
                     if (i<-15||i>850)
                         veri  =  -veri;
                     if (j>81 || j<-8)
                         verj = -verj;
                        i += veri;
                        j += verj;
-                      ship1.setLocation(i, j);     
-                       }
-            });
-        Timer t2 = new Timer(15 , new ActionListener(){
-        
-                public void actionPerformed(ActionEvent e ){
-                    
+                      ship1.setLocation(i, j);
+                      
                     if (i2<-15||i2>850)
                         veri2  =  -veri2;
                     if (j2>81 || j2<-8)
                         verj2 = -verj2;
                        i2 += veri2;
                        j2 += verj2;
-                      ship2.setLocation(i2, j2);     
-                       }
-            });
-        Timer t3 = new Timer(15 , new ActionListener(){
-        
-                public void actionPerformed(ActionEvent e ){
-                    
+                      ship2.setLocation(i2, j2);   
+                      
                     if (i3<-15||i3>850)
                         veri3  =  -veri3;
                     if (j3>81 || j3<-8)
                         verj3 = -verj3;
                        i3 += veri3;
                        j3 += verj3;
-                      ship3.setLocation(i3, j3);     
-                       }
-            });
-        Timer t4 = new Timer(15 , new ActionListener(){
-        
-                public void actionPerformed(ActionEvent e ){
-                    
+                      ship3.setLocation(i3, j3);  
+                      
                     if (i4<-15||i4>850)
                         veri4  =  -veri4;
                     if (j4>81 || j4<-8)
                         verj4 = -verj4;
                        i4 += veri4;
                        j4 += verj4;
-                      ship4.setLocation(i4, j4);     
-                       }
-            });
-        Timer t5 = new Timer(15 , new ActionListener(){
-        
-                public void actionPerformed(ActionEvent e ){
-                    
+                      ship4.setLocation(i4, j4); 
+                       
                     if (i5<-15||i5>850)
                         veri5  =  -veri5;
                     if (j5>81 || j5<-8)
@@ -146,123 +126,11 @@ public class StartForm extends javax.swing.JFrame {
                        i5 += veri5;
                        j5 += verj5;
                       ship5.setLocation(i5, j5);     
+                       
                        }
             });
-      
         t1.start();
-        t2.start();
-        t3.start();
-        t4.start();
-        t5.start();
-        
     }
-  
-    
-    public void backGroundAnimetion(){
-
-    Timer tm1 = new Timer(15 , new ActionListener(){
-        
-                public void actionPerformed(ActionEvent e ){
-                    
-                    if (x<0||x>890)
-                        verX  =  -verX;
-                    if (y>500 || y<127)
-                        verY = -verY;
-                       x += verX;
-                       y += verY;
-                      dice1.setLocation(x, y);   
-                      countter++;
-                      if(freeVideos && !userMoneyShow.isEmpty() ){
-                      if(countter == 100 && userMoneyShow.get(0) <= 800){
-                          advertiseFree.setVisible(true);
-                          freeMoneyText.setVisible(true);
-                          freeVideos = false;
-                      }
-                       }
-                }
-            });
-    
-    Timer tm2 = new Timer(15 , new ActionListener(){
-       
-                public void actionPerformed(ActionEvent e ){
-                    
-                    if (x2<0||x2>890)
-                        verX2  =  -verX2;
-                    if (y2>500 || y2<127)
-                        verY2 = -verY2;
-                       x2 += verX2;
-                       y2 += verY2;
-                       
-                      dice2.setLocation(x2, y2);     
-                       
-                }
-            });
-    Timer tm3 = new Timer(15 , new ActionListener(){
-       
-                public void actionPerformed(ActionEvent e ){
-                    
-                    if (x3<0||x3>890)
-                        verX3  =  -verX3;
-                    if (y3>500 || y3<127)
-                        verY3 = -verY3;
-                       x3 += verX3;
-                       y3 += verY3;
-                       
-                      dice3.setLocation(x3, y3);     
-                       
-                }
-            });
-    Timer tm4 = new Timer(15 , new ActionListener(){
-       
-                public void actionPerformed(ActionEvent e ){
-                    
-                    if (x4<0||x4>890)
-                        verX4  =  -verX4;
-                    if (y4>500 || y4<127)
-                        verY4 = -verY4;
-                       x4 += verX4;
-                       y4 += verY4;
-                       
-                      dice4.setLocation(x4, y4);     
-                       
-                }
-            });
-    Timer tm5 = new Timer(15 , new ActionListener(){
-       
-                public void actionPerformed(ActionEvent e ){
-                    
-                    if (x5<0||x5>890)
-                        verX5  =  -verX5;
-                    if (y5>500 || y5<127)
-                        verY5 = -verY5;
-                       x5 += verX5;
-                       y5 += verY5;
-                       
-                      dice5.setLocation(x5, y5);     
-                       
-                }
-            });
-    Timer tm6 = new Timer(15 , new ActionListener(){
-       
-                public void actionPerformed(ActionEvent e ){
-                    
-                    if (x6<0||x6>890)
-                        verX6  =  -verX6;
-                    if (y6>500 || y6<127)
-                        verY6 = -verY6;
-                       x6 += verX6;
-                       y6 += verY6;
-                     dice6.setLocation(x6, y6);     
-                     }
-            });
-    
-    tm2.start();
-    tm1.start();
-    tm3.start();
-    tm4.start();
-    tm5.start();
-    tm6.start();
- }
  
     /**
      * This method is called from within the constructor to initialize the form.
