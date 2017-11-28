@@ -172,7 +172,7 @@ public class StartForm extends javax.swing.JFrame {
                        y += verY;
                       dice1.setLocation(x, y);   
                       countter++;
-                      if(freeVideos){
+                      if(freeVideos && !userMoneyShow.isEmpty() ){
                       if(countter == 100 && userMoneyShow.get(0) <= 800){
                           advertiseFree.setVisible(true);
                           freeMoneyText.setVisible(true);
@@ -273,6 +273,12 @@ public class StartForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dice6 = new javax.swing.JLabel();
+        dice5 = new javax.swing.JLabel();
+        dice4 = new javax.swing.JLabel();
+        dice3 = new javax.swing.JLabel();
+        dice2 = new javax.swing.JLabel();
+        dice1 = new javax.swing.JLabel();
         advertiseFree = new javax.swing.JLabel();
         freeMoneyText = new javax.swing.JTextField();
         diceGamePic = new javax.swing.JLabel();
@@ -289,13 +295,19 @@ public class StartForm extends javax.swing.JFrame {
         moneyPic = new javax.swing.JLabel();
         usShow = new javax.swing.JTextField();
         logoutBut = new javax.swing.JButton();
-        dice6 = new javax.swing.JLabel();
-        dice5 = new javax.swing.JLabel();
-        dice4 = new javax.swing.JLabel();
-        dice3 = new javax.swing.JLabel();
-        dice2 = new javax.swing.JLabel();
-        dice1 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
+
+        dice6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice6.png"))); // NOI18N
+
+        dice5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice5.png"))); // NOI18N
+
+        dice4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice4.png"))); // NOI18N
+
+        dice3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice3.png"))); // NOI18N
+
+        dice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice2.png"))); // NOI18N
+
+        dice1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice1.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -409,24 +421,6 @@ public class StartForm extends javax.swing.JFrame {
             }
         });
         getContentPane().add(logoutBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 460, 80, 30));
-
-        dice6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice6.png"))); // NOI18N
-        getContentPane().add(dice6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        dice5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice5.png"))); // NOI18N
-        getContentPane().add(dice5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        dice4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice4.png"))); // NOI18N
-        getContentPane().add(dice4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        dice3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice3.png"))); // NOI18N
-        getContentPane().add(dice3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        dice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice2.png"))); // NOI18N
-        getContentPane().add(dice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        dice1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImageDice/dice1.png"))); // NOI18N
-        getContentPane().add(dice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageStart/BG.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
