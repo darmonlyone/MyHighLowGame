@@ -1,3 +1,7 @@
+/*
+* This class use for test running as console.
+* Also return card picture file for using on MyCardGame class.
+*/
 package myhilo;
 
 import java.util.List;

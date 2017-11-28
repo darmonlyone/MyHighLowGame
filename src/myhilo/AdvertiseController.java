@@ -1,6 +1,7 @@
 /*
  * AdvertiseController class for controlling fxml file.
  * Random a Videos for opening as advertise.
+ * Advertise videos on advertiseVideos package
  */
 package myhilo;
 

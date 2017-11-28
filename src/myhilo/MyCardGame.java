@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class for playing CardGame which will get your acount use
+ * and set money all the time you finished a game.a
  */
 package myhilo;
 

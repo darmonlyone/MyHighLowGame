@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Login form use for login to play on Hilo Game with your own account.
  */
 package myhilo;
 import java.io.File;
