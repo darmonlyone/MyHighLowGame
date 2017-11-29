@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 import javax.swing.Timer;
 import java.util.Random;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.util.Duration;
@@ -34,9 +35,13 @@ import myhilo.FileLock;
  * @author hp
  */
 public class AdvertiseController implements Initializable {
+    @FXML
     private String filepath;
+    @FXML
     private MediaPlayer mediaPlayer;
+    @FXML
     public MediaView mediaView;
+    @FXML
     public Button skipButt;
     long startTime = System.currentTimeMillis();
     private Random rd = new Random();

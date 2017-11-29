@@ -73,60 +73,55 @@ public class StartForm extends javax.swing.JFrame {
      }
     public void backGroundAnimetion2(){
         
-        Timer t1 = new Timer(15 , new ActionListener(){
-        
-                public void actionPerformed(ActionEvent e ){
-                    
-                    if(freeVideos && !userMoneyShow.isEmpty() && i == 160 ){
-                      if(userMoneyShow.get(0) <= 800){
-                          advertiseFree.setVisible(true);
-                          freeMoneyText.setVisible(true);
+        Timer t1 = new Timer(15 , (ActionEvent e) -> {
+            if(freeVideos && !userMoneyShow.isEmpty() && i == 160 ){
+                if(userMoneyShow.get(0) <= 800){
+                    advertiseFree.setVisible(true);
+                    freeMoneyText.setVisible(true);
                           freeVideos = false;
-                      }
-                    }
-                      
-                    if (i<-15||i>850)
-                        veri  =  -veri;
-                    if (j>81 || j<-8)
-                        verj = -verj;
-                       i += veri;
-                       j += verj;
-                      ship1.setLocation(i, j);
-                      
-                    if (i2<-15||i2>850)
-                        veri2  =  -veri2;
-                    if (j2>81 || j2<-8)
-                        verj2 = -verj2;
-                       i2 += veri2;
-                       j2 += verj2;
-                      ship2.setLocation(i2, j2);   
-                      
-                    if (i3<-15||i3>850)
-                        veri3  =  -veri3;
-                    if (j3>81 || j3<-8)
-                        verj3 = -verj3;
-                       i3 += veri3;
-                       j3 += verj3;
-                      ship3.setLocation(i3, j3);  
-                      
-                    if (i4<-15||i4>850)
-                        veri4  =  -veri4;
-                    if (j4>81 || j4<-8)
-                        verj4 = -verj4;
-                       i4 += veri4;
-                       j4 += verj4;
-                      ship4.setLocation(i4, j4); 
-                       
-                    if (i5<-15||i5>850)
-                        veri5  =  -veri5;
-                    if (j5>81 || j5<-8)
-                        verj5 = -verj5;
-                       i5 += veri5;
-                       j5 += verj5;
-                      ship5.setLocation(i5, j5);     
-                       
-                       }
-            });
+                }
+            }
+            
+            if (i<-15||i>850)
+                veri  =  -veri;
+            if (j>81 || j<-8)
+                verj = -verj;
+            i += veri;
+            j += verj;
+            ship1.setLocation(i, j);
+            
+            if (i2<-15||i2>850)
+                veri2  =  -veri2;
+            if (j2>81 || j2<-8)
+                verj2 = -verj2;
+            i2 += veri2;
+            j2 += verj2;
+            ship2.setLocation(i2, j2);
+            
+            if (i3<-15||i3>850)
+                veri3  =  -veri3;
+            if (j3>81 || j3<-8)
+                verj3 = -verj3;
+            i3 += veri3;
+            j3 += verj3;
+            ship3.setLocation(i3, j3);
+            
+            if (i4<-15||i4>850)
+                veri4  =  -veri4;
+            if (j4>81 || j4<-8)
+                verj4 = -verj4;
+            i4 += veri4;
+            j4 += verj4;
+            ship4.setLocation(i4, j4);
+            
+            if (i5<-15||i5>850)
+                veri5  =  -veri5;
+            if (j5>81 || j5<-8)
+                verj5 = -verj5;
+            i5 += veri5;
+            j5 += verj5;
+            ship5.setLocation(i5, j5);
+        });
         t1.start();
     }
  

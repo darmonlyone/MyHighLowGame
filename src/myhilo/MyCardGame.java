@@ -38,9 +38,10 @@ public class MyCardGame extends javax.swing.JFrame {
         static int enemyCardNum,enemyHiddenCardNum = 0;
         static int betMoney;
         static int money = 0;
+        static boolean betMoneyCheck = true;
         
      FileLock file = new FileLock();
-    public void setArrayList(){
+    private void setArrayList(){
        
         file.setUPMlog();
         file.setUPMAF();
@@ -69,7 +70,7 @@ public class MyCardGame extends javax.swing.JFrame {
         logSave.close();
     }
         
-        public void setMoney(){
+        private void setMoney(){
           String mn = Integer.toString(money);
           moneyString.setText(mn);
           
@@ -109,7 +110,7 @@ public class MyCardGame extends javax.swing.JFrame {
         public void ourNewCard(){
         while(true){
             ourCardNum = randomCard();
-            if(!cardUsed.contains(ourCardNum) || cardUsed.size() == 0){
+            if(!cardUsed.contains(ourCardNum) || cardUsed.isEmpty()){
                 System.out.println("Ourcard = "+ourCardNum);
                 cardUsed.add(ourCardNum);
                 ourHiddenCardNum = ourCardNum;
@@ -120,7 +121,7 @@ public class MyCardGame extends javax.swing.JFrame {
         public void enemyNewCard(){
             while(true){
                 enemyCardNum = randomCard();
-                if(!cardUsed.contains(enemyCardNum)||cardUsed.size()==0){
+                if(!cardUsed.contains(enemyCardNum)||cardUsed.isEmpty()){
                     System.out.println("EnemyCard = "+enemyCardNum);
                 cardUsed.add(enemyCardNum);
                 enemyHiddenCardNum = enemyCardNum;
@@ -157,6 +158,35 @@ public class MyCardGame extends javax.swing.JFrame {
              GetFreeMoney get = new GetFreeMoney();
                get.setVisible(true);
          }
+     }
+     public void setGamePlay(){
+           if(betMoneyText.getText().equals("money here")||betMoneyText.getText().equals("")){
+            tooMuch.setText("Please put some money");
+            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
+        }
+       else if (!isNumber(betMoneyText.getText())){
+           tooMuch.setText("Please put a number");
+            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
+       }
+       else if(Integer.parseInt(betMoneyText.getText())<=0){
+             tooMuch.setText("Please put money more than 0");
+            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
+        }
+       else if(Integer.parseInt(betMoneyText.getText())>money){
+            tooMuch.setText("Not more than your money");
+            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
+        }else{
+           addCard();
+           backButt.setEnabled(false);
+           backButt.setVisible(false);
+            betButt.setEnabled(false);
+           betMoneyText.setEditable(false);
+             tooMuch.setText("");
+        betMoney = Integer.parseInt(betMoneyText.getText());
+        setButtEnable();
+       setCard();
+       betMoneyCheck = false;
+        }
      }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -449,33 +479,7 @@ public class MyCardGame extends javax.swing.JFrame {
 		}
 	}
     private void betButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_betButtActionPerformed
-                
-        if(betMoneyText.getText().equals("money here")||betMoneyText.getText().equals("")){
-            tooMuch.setText("Please put some money");
-            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
-        }
-       else if (!isNumber(betMoneyText.getText())){
-           tooMuch.setText("Please put a number");
-            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
-       }
-       else if(Integer.parseInt(betMoneyText.getText())<=0){
-             tooMuch.setText("Please put money more than 0");
-            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
-        }
-       else if(Integer.parseInt(betMoneyText.getText())>money){
-            tooMuch.setText("Not more than your money");
-            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
-        }else{
-           addCard();
-           backButt.setEnabled(false);
-           backButt.setVisible(false);
-            betButt.setEnabled(false);
-           betMoneyText.setEditable(false);
-             tooMuch.setText("");
-        betMoney = Integer.parseInt(betMoneyText.getText());
-        setButtEnable();
-       setCard();
-        }
+                setGamePlay();
     }//GEN-LAST:event_betButtActionPerformed
 
     private void newCardButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newCardButtActionPerformed
@@ -589,6 +593,7 @@ public class MyCardGame extends javax.swing.JFrame {
         enemyNewCradCountText.setForeground(new java.awt.Color(255, 153, 0));
         betMoneyText.setEnabled(true);
         betMoneyText.setEditable(true);
+        betMoneyCheck = true;
     }//GEN-LAST:event_resetButtActionPerformed
 
     private void backButtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backButtMouseClicked
@@ -607,32 +612,10 @@ public class MyCardGame extends javax.swing.JFrame {
 
     private void betMoneyTextKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_betMoneyTextKeyPressed
     if (evt.getKeyCode()==KeyEvent.VK_ENTER){
-                      
-        if(betMoneyText.getText().equals("money here")||betMoneyText.getText().equals("")){
-            tooMuch.setText("Please put some money");
-            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
-        }
-       else if (!isNumber(betMoneyText.getText())){
-           tooMuch.setText("Please put a number");
-            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
-       }
-       else if(Integer.parseInt(betMoneyText.getText())<=0){
-             tooMuch.setText("Please put money more than 0");
-            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
-        }
-       else if(Integer.parseInt(betMoneyText.getText())>money){
-            tooMuch.setText("Not more than your money");
-            tooMuch.setForeground(new java.awt.Color(255, 0, 0));
-        }else{
-           addCard();
-            betButt.setEnabled(false);
-           betMoneyText.setEditable(false);
-             tooMuch.setText("");
-        betMoney = Integer.parseInt(betMoneyText.getText());
-        setButtEnable();
-       setCard();
-        }
-        }        // TODO add your handling code here:
+         if(betMoneyCheck){
+            setGamePlay();
+        } 
+    }
     }//GEN-LAST:event_betMoneyTextKeyPressed
 
     private void what2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_what2MouseClicked
