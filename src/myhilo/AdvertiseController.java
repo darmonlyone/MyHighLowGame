@@ -94,7 +94,7 @@ public class AdvertiseController implements Initializable {
         else if (num == 3 ) str = "Advertise_3.mp4";
         else return null;
         
-        return "src/advertiseViedeos/"+str;
+        return "FileLoader/advertiseViedeos/"+str;
     }
     public void run(){
 //         FileChooser fileChooser = new FileChooser();

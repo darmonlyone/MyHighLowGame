@@ -78,7 +78,6 @@ public class StartForm extends javax.swing.JFrame {
                 if(userMoneyShow.get(0) <= 800){
                     advertiseFree.setVisible(true);
                     freeMoneyText.setVisible(true);
-                          freeVideos = false;
                 }
             }
             
@@ -331,6 +330,7 @@ public class StartForm extends javax.swing.JFrame {
     private void advertiseFreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_advertiseFreeMouseClicked
         try {
             AdvertiseMain.main(null);
+            freeVideos = false;
             userMoneyShow.set(0,userMoneyShow.get(0)+5000);
         } catch (Exception e) {
             System.out.println(e);
