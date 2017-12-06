@@ -13,8 +13,7 @@ import org.mindrot.jbcrypt.BCrypt;
 class PasswordSolve {
     
 //   private static String encryptedPassword;
-   
-   
+
     public  boolean isHaveNumber(String what){
         try {
 			Integer.parseInt(what);

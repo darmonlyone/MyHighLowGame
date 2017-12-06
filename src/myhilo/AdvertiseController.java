@@ -5,29 +5,20 @@
  */
 package myhilo;
 
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.PrintStream;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javax.swing.Timer;
 import java.util.Random;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.util.Duration;
-import myhilo.FileLock;
+import myhilo.FileSet;
 
 /**
  * FXML Controller class
@@ -52,7 +43,7 @@ public class AdvertiseController implements Initializable {
     static List<String> userLoginShow;
     static List<String> userLog;
     static int money = 0;
-    private FileLock fileKeeps = new FileLock();
+    private FileSet fileKeeps = new FileSet();
     
      public void setArrayList(){
        

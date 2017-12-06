@@ -2,17 +2,10 @@
  * Login form use for login to play on Hilo Game with your own account.
  */
 package myhilo;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.List;
 import java.awt.Color;
 import java.awt.event.*;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
 import java.io.PrintStream;
-import javax.swing.*;
 /**
  *
  * @author Manusporn Fukkham
@@ -23,10 +16,10 @@ public class LoginForm extends javax.swing.JFrame {
      * Creates new form login
      */
     
-    static List<String> username;
-    static List<String> password;
-    static List<Integer> userMoney;
-    FileLock file = new FileLock();
+    public static List<String> username;
+    public static List<String> password;
+    public static List<Integer> userMoney;
+    public FileSet file = new FileSet();
     
       public LoginForm() {
        

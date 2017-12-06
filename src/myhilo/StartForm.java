@@ -5,12 +5,7 @@ package myhilo;
 
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import javax.swing.Timer;
 
 
@@ -24,14 +19,13 @@ public class StartForm extends javax.swing.JFrame {
     /**
      * Creates new form StartForm
      */
-    static HowToPlayDiceGame what = new HowToPlayDiceGame();
-    static LoginForm login = new LoginForm();
-    static List<String> userLog; 
-    static List<Integer> userMoney;
-    static List<String> userLogin;
-    static List<Integer> userMoneyShow; 
-    static List<String> userLoginShow;   
-    private FileLock file = new FileLock();
+    private static LoginForm login = new LoginForm();
+    private static List<String> userLog; 
+    private static List<Integer> userMoney;
+    private static List<String> userLogin;
+    private static List<Integer> userMoneyShow; 
+    private static List<String> userLoginShow;   
+    private FileSet file = new FileSet();
     private static boolean freeVideos = true;
      
     private int i = 0 , j =0, veri =2, verj =1;
@@ -123,7 +117,13 @@ public class StartForm extends javax.swing.JFrame {
         });
         t1.start();
     }
- 
+    private void clearList(){
+       userLog.clear();
+       userLogin.clear();
+       userMoney.clear();
+       userLoginShow.clear();
+       userMoneyShow.clear();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -289,42 +289,26 @@ public class StartForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void playButtDiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtDiceActionPerformed
-       MyDiceGame playDiceGame = new MyDiceGame();
-       userLog.clear();
-       userLogin.clear();
-       userMoney.clear();
-       userLoginShow.clear();
-       userMoneyShow.clear();
-       playDiceGame.setVisible(true);
-       what.setVisible(true);
+       clearList();
+       new MyDiceGame().setVisible(true);
+       new HowToPlay("DiceGame").setVisible(true);
        this.setVisible(false);
         file.setAllListClear();
     }//GEN-LAST:event_playButtDiceActionPerformed
 
     private void logoutButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButActionPerformed
-       LoginForm logout = new LoginForm();
-       userLog.clear();
-       userLogin.clear();
-       userMoney.clear();
-       userLoginShow.clear();
-       userMoneyShow.clear();
-       logout.setVisible(true);
+       clearList();
+       new LoginForm().setVisible(true);
        this.setVisible(false);
-        file.setAllListClear();
+       file.setAllListClear();
     }//GEN-LAST:event_logoutButActionPerformed
 
     private void playCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playCardActionPerformed
-       MyCardGame playCardGame = new MyCardGame();
-       HowToPlayCardGame how = new HowToPlayCardGame();
-       userLog.clear();
-       userLogin.clear();
-       userMoney.clear();
-       userLoginShow.clear();
-       userMoneyShow.clear();
-       playCardGame.setVisible(true);
-       how.setVisible(true);
+       clearList();
+       new MyCardGame().setVisible(true);
+       new HowToPlay("CardGame").setVisible(true);  
        this.setVisible(false);
-       file.setAllListClear();       
+       file.setAllListClear(); 
     }//GEN-LAST:event_playCardActionPerformed
 
     private void advertiseFreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_advertiseFreeMouseClicked

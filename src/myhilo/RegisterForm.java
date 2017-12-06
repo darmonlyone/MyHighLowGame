@@ -5,7 +5,6 @@ package myhilo;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.io.*;
-import java.util.*;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
@@ -17,8 +16,8 @@ public class RegisterForm extends  javax.swing.JFrame {
     /**
      * Creates new form registerForm
      */
-    LoginForm login = new LoginForm();
-    FileLock file = new FileLock();
+    private LoginForm login = new LoginForm();
+    private FileSet file = new FileSet();
     
     public RegisterForm() {
         setSize(500, 500);
@@ -73,8 +72,7 @@ public class RegisterForm extends  javax.swing.JFrame {
             login.username.clear();
             login.password.clear();
             login.userMoney.clear();
-            NewMoneyAccount newmoney = new NewMoneyAccount();
-            newmoney.setVisible(true);
+            new Alert("NewAccount").setVisible(true);
             file.setAllListClear();
                 }
        logSave.close();

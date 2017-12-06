@@ -11,7 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Timer;
 import java.util.List;
-import java.util.ArrayList;
 
 /**
  *
@@ -21,14 +20,18 @@ import java.util.ArrayList;
 
 public class MyDiceGame extends JFrame {
     
-    static List<Integer> userMoney;
-    static List<String> password;
-    static List<String> userLogin;
-    static List<Integer> userMoneyShow;
-    static List<String> userLoginShow;
-    static List<String> userLog;
+    private static List<Integer> userMoney;
+    private static List<String> password;
+    private static List<String> userLogin;
+    private static List<Integer> userMoneyShow;
+    private static List<String> userLoginShow;
+    private static List<String> userLog;
+    private int i = 250; 
+    private int j = 430;
+    private Timer tm1;
+    private Timer tm2;
     
-    FileLock file = new FileLock();
+    FileSet file = new FileSet();
     public void setArrayList(){
         file.setUPMlog();
         file.setUPMAF();
@@ -113,8 +116,7 @@ public class MyDiceGame extends JFrame {
                betMoney=0;
                setBetMoney = Integer.toString(betMoney);
                whatSelectShip.setText(setBetMoney+" BATH");
-               GetFreeMoney get = new GetFreeMoney();
-               get.setVisible(true);
+               new Alert("FreeMoney").setVisible(true);
            }
            if(betMoney > money){
            betMoney = money;
@@ -124,20 +126,7 @@ public class MyDiceGame extends JFrame {
            setMoney();
            setSaveStatus();
        }
-//       public int howMuchBet(){
-//           if(ship10select.isSelected()){
-//               return 10;
-//           }if (ship20select.isSelected()){
-//               return 20;
-//           }if (ship50select.isSelected()){
-//               return 50;
-//           }if (ship100select.isSelected()){
-//               return 100;
-//           }if (ship200select.isSelected()){
-//               return 200;
-//           }
-//           return 0;
-//       }
+       
        public int timeToGot(){
            if(oneOrfiveselect.isSelected()){
             return 2;
@@ -234,7 +223,7 @@ public class MyDiceGame extends JFrame {
          }
      } 
     public void rollDice(){
-        ShowDice show = new ShowDice();
+        GetPNG show = new GetPNG();
              diceShow1.setIcon(new javax.swing.ImageIcon(getClass().getResource(show.getImageRollBig(rollA))));
              dice1.setIcon(new ImageIcon(getClass().getResource(show.getImageRollSmall(rollA))));
         
@@ -923,8 +912,8 @@ public class MyDiceGame extends JFrame {
 //            jLabel6.setIcon(new ImageIcon(getClass().getResource("/Image/rolll.png")));
 //            jLabel7.setIcon(new ImageIcon(getClass().getResource("/Image/rolll.png")));
 //            jLabel8.setIcon(new ImageIcon(getClass().getResource("/Image/rolll.png")));
-           
-            Timer tm2 = new Timer (30,new ActionListener(){
+           try {
+             tm2 = new Timer (30,new ActionListener(){
                 
                 public void actionPerformed(ActionEvent e ){
                     if ( j == 430){
@@ -941,61 +930,70 @@ public class MyDiceGame extends JFrame {
                         backButt.setVisible(true);
                         rollBut.setEnabled(true);
                         resetButt.setEnabled(true);
-        ship10.setEnabled(true);
-        ship20.setEnabled(true);
-        ship100.setEnabled(true);
-        ship50.setEnabled(true);
-        ship200.setEnabled(true);
-        elevenHiLo.setEnabled(true);
-        sixlow.setEnabled(true);
-        fivelow.setEnabled(true);
-        fiveOrtwo.setEnabled(true);
-        one.setEnabled(true);
-        two.setEnabled(true);
-        three.setEnabled(true);
-        four.setEnabled(true);
-        five.setEnabled(true);
-        six.setEnabled(true);
-        high.setEnabled(true);
-        low.setEnabled(true);
-        oneORfive.setEnabled(true);
-        oneOrsix.setEnabled(true);
-        twoOrfive.setEnabled(true);
-        onetwothree.setEnabled(true);
-        fourfivesix.setEnabled(true);
-        threeOrsix.setEnabled(true);
-        threeOrfive.setEnabled(true);
-        twoOrfour.setEnabled(true);
-        twoOrfive.setEnabled(true);
-        sixOrone.setEnabled(true);
-        sixOrtwo.setEnabled(true);
-                       ((Timer)evt.getSource()).stop();
+                        ship10.setEnabled(true);
+                        ship20.setEnabled(true);
+                        ship100.setEnabled(true);
+                        ship50.setEnabled(true);
+                        ship200.setEnabled(true);
+                        elevenHiLo.setEnabled(true);
+                        sixlow.setEnabled(true);
+                        fivelow.setEnabled(true);
+                        fiveOrtwo.setEnabled(true);
+                        one.setEnabled(true);
+                        two.setEnabled(true);
+                        three.setEnabled(true);
+                        four.setEnabled(true);
+                        five.setEnabled(true);
+                        six.setEnabled(true);
+                        high.setEnabled(true);
+                        low.setEnabled(true);
+                        oneORfive.setEnabled(true);
+                        oneOrsix.setEnabled(true);
+                        twoOrfive.setEnabled(true);
+                        onetwothree.setEnabled(true);
+                        fourfivesix.setEnabled(true);
+                        threeOrsix.setEnabled(true);
+                        threeOrfive.setEnabled(true);
+                        twoOrfour.setEnabled(true);
+                        twoOrfive.setEnabled(true);
+                        sixOrone.setEnabled(true);
+                        sixOrtwo.setEnabled(true);
+                       tm2.stop();
                     }
                    i = 250;
                 }
             });
-                   
-            Timer tm1 = new Timer(30 , new ActionListener(){
+        } catch (Exception e) {
+                                 System.out.println("lol");
+
+        }
+            
+                 try {
+              tm1 = new Timer(30 , new ActionListener(){
                 public void actionPerformed(ActionEvent e ){
                     i+=10;
                     cover.setLocation(i, 40);
                     
                     if(i==430){
                         tm2.start();
-                        ((Timer)evt.getSource()).stop();
+                        tm1.stop();
                         
                         }
                    j = 430;
                 }
             });
            
-                tm1.start();
-            
+                
+        } catch (Exception e) {
+                     System.out.println("lol");
+        }
+  
+           
+            tm1.start();
                     
                           
     }//GEN-LAST:event_rollButActionPerformed
-    int i = 250; 
-    int j = 430;
+  
     private void sixMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sixMouseClicked
        sixselect.setSelected(true);
        whatSelectBet.setForeground(Color.BLACK);
@@ -1238,14 +1236,13 @@ public class MyDiceGame extends JFrame {
     }//GEN-LAST:event_resetButtActionPerformed
 
     private void whatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_whatMouseClicked
-        HowToPlayDiceGame what = new HowToPlayDiceGame();
-        what.setVisible(true);
+        new HowToPlay("DiceGame").setVisible(true);
     }//GEN-LAST:event_whatMouseClicked
 
     private void backButtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backButtMouseClicked
         null1.setSelected(true);
         null2.setSelected(true);
-        StartForm star = new StartForm();
+        new StartForm().setVisible(true);
         userLog.clear();
         userLogin.clear();
         userLoginShow.clear();
@@ -1253,8 +1250,7 @@ public class MyDiceGame extends JFrame {
         userMoneyShow.clear();
         password.clear();
         this.setVisible(false);
-        star.setVisible(true);
-         file.setAllListClear();
+        file.setAllListClear();
     }//GEN-LAST:event_backButtMouseClicked
      
     /**

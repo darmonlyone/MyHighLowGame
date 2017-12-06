@@ -6,11 +6,7 @@ package myhilo;
 
 import java.awt.Color;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.PrintStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -23,24 +19,24 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
  * @author Maunsporn Fukkham
  */
 public class MyCardGame extends javax.swing.JFrame {
-    static List<Integer> userMoney;
-    static List<String> password;
-    static List<String> userLogin;
-    static List<Integer>userMoneyShow;
-    static List<String> userLoginShow;
-    static List<String> userLog;
-    static List<Integer> cardDeck = new ArrayList<Integer>();
-        static List<Integer> cardUsed = new ArrayList<Integer>();
-	static Random rd = new Random();
-        static Scanner sc = new Scanner(System.in);
-        static GetCard cardgame = new GetCard();
-        static int ourCardNum,ourHiddenCardNum = 0; 
-        static int enemyCardNum,enemyHiddenCardNum = 0;
-        static int betMoney;
-        static int money = 0;
-        static boolean betMoneyCheck = true;
+    private static List<Integer> userMoney;
+    private static List<String> password;
+    private static List<String> userLogin;
+    private static List<Integer>userMoneyShow;
+    private static List<String> userLoginShow;
+    private static List<String> userLog;
+    private static List<Integer> cardDeck = new ArrayList<Integer>();
+    private static List<Integer> cardUsed = new ArrayList<Integer>();
+    private static Random rd = new Random();
+    private static Scanner sc = new Scanner(System.in);
+    private static GetPNG cardgame = new GetPNG();
+    private static int ourCardNum,ourHiddenCardNum = 0; 
+    private static int enemyCardNum,enemyHiddenCardNum = 0;
+    private static int betMoney;
+    private static int money = 0;
+    private static boolean betMoneyCheck = true;
         
-     FileLock file = new FileLock();
+    private  FileSet file = new FileSet();
     private void setArrayList(){
        
         file.setUPMlog();
@@ -155,8 +151,7 @@ public class MyCardGame extends javax.swing.JFrame {
      public void noMoney(){
          if (money == 0){
              money = 100;
-             GetFreeMoney get = new GetFreeMoney();
-               get.setVisible(true);
+            new Alert("FreeMoney").setVisible(true);
          }
      }
      public void setGamePlay(){
@@ -187,7 +182,15 @@ public class MyCardGame extends javax.swing.JFrame {
        setCard();
        betMoneyCheck = false;
         }
-     }
+     } 
+     public boolean isNumber(String what){
+		try {
+			Integer.parseInt(what);
+			return true;
+		} catch(NumberFormatException ex) {
+			return false;
+		}
+	}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -470,14 +473,7 @@ public class MyCardGame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   public boolean isNumber(String what){
-		try {
-			Integer.parseInt(what);
-			return true;
-		} catch(NumberFormatException ex) {
-			return false;
-		}
-	}
+  
     private void betButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_betButtActionPerformed
                 setGamePlay();
     }//GEN-LAST:event_betButtActionPerformed
@@ -528,8 +524,6 @@ public class MyCardGame extends javax.swing.JFrame {
     }//GEN-LAST:event_betMoneyTextKeyTyped
 
     private void checkButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkButtActionPerformed
-                   
-        
         betMoneyText.setEnabled(false);
         resetButt.setEnabled(true);
         betButt.setEnabled(false);
@@ -597,8 +591,7 @@ public class MyCardGame extends javax.swing.JFrame {
     }//GEN-LAST:event_resetButtActionPerformed
 
     private void backButtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backButtMouseClicked
-        
-        StartForm star = new StartForm();
+        new StartForm().setVisible(true);
         userLog.clear();
         userLogin.clear();
         userLoginShow.clear();
@@ -606,7 +599,6 @@ public class MyCardGame extends javax.swing.JFrame {
         userMoneyShow.clear();
         password.clear();
         this.setVisible(false);
-        star.setVisible(true);
         file.setAllListClear();
     }//GEN-LAST:event_backButtMouseClicked
 
@@ -619,8 +611,7 @@ public class MyCardGame extends javax.swing.JFrame {
     }//GEN-LAST:event_betMoneyTextKeyPressed
 
     private void what2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_what2MouseClicked
-        HowToPlayCardGame what = new HowToPlayCardGame();
-        what.setVisible(true);
+        new HowToPlay("CardGame").setVisible(true);
     }//GEN-LAST:event_what2MouseClicked
 
     /**
