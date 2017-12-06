@@ -64,7 +64,8 @@ Click [here](....) to get the latest version of this application.
 
 To run the program you need:
 * Oracle Java Runtime Environment (JRE) version 8 or newer
-* AbsoluteLayout.jar and beansbinding-1.2.1.jar (in lib diirectory)
+* jbcrypt.jar, AbsoluteLayout.jar and beansbinding-1.2.1.jar (in lib diirectory)
+* FileLoader folder (in top directory)
 * MyHiLO.jar (in top directory)
 
 Download these files to a directory on your computer. Strongly recommended that you use a directory **without any spaces in the path**.
