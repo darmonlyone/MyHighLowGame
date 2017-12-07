@@ -4,7 +4,7 @@ test/
 build/
 nbproject/
 
-.xml
-.mf
+*.xml
+*.mf
 
 *.psd
