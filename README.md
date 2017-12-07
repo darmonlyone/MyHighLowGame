@@ -58,24 +58,26 @@ in the future we will add more games to this application keeping the concept of 
 ## Get This Game
 #### Download
 
-Click [here](....) to get the latest version of this application.
+Click [here](https://github.com/darmonlyone/MyHighLowGame/releases) to get the latest version of this application.
 
 ### Installation
 
 To run the program you need:
 * Oracle Java Runtime Environment (JRE) version 8 or newer
 * jbcrypt.jar, AbsoluteLayout.jar and beansbinding-1.2.1.jar (in lib diirectory)
-* FileLoader folder (in top directory)
+* FileLoader package (in top directory)
 * MyHiLO.jar (in top directory)
 
 Download these files to a directory on your computer. Strongly recommended that you use a directory **without any spaces in the path**.
+* you can get lib and FileLoader package on **data.zip**
 
 **TODO** Put all the files the user needs in a directory named "dist"
 
 #### Using Apple
-     infomation
+     Run >> HighLow.exe
+     
 #### Using Windows
-    information
+     Run >> myHighLO.jar
 
 #### Any Operating System
 Suppose you have downloaded the files to a directory named /home/username/games. Then add these files to classpath and run the main class of game using:
