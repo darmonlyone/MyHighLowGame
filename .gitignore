@@ -4,7 +4,9 @@ test/
 build/
 nbproject/
 
-*.xml
-*.mf
+build.xml
+manifest.mf
+window_lan.xml
 
+*.zip
 *.psd
