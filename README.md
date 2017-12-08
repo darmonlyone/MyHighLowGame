@@ -69,16 +69,19 @@ To run the program you need:
 * MyHiLO.jar (in top directory)
 
 Download these files to a directory on your computer. Strongly recommended that you use a directory **without any spaces in the path**.
-* you can get lib and FileLoader package on **data.zip**
 
 **TODO** Put all the files the user needs in a directory named "dist"
 
 #### Using Apple
-     Run >> HighLow.exe
+   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases)** >> *HighLow.zip*
+   - Extract HighLow.zip file 
+   - **Run** MyHiLO.jar
      
 #### Using Windows
-     Run >> myHighLO.jar
-
+   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases)** >> *HighLow_win.rar*   
+   - Extract HighLow_win.rar file 
+   - **Run** MyHiLO.exe
+     
 #### Any Operating System
 Suppose you have downloaded the files to a directory named /home/username/games. Then add these files to classpath and run the main class of game using:
 ```shell
