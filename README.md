@@ -96,4 +96,4 @@ application like using an Array, ArrayList, Method, Class, FileLoader, FileWrite
 very much for your guy to enjoy this application.**
 
 ## Contributors
-- [**Manusporn Fukkham**](https://github.com/darmonlyone) 6010546702 
+- [**Manusporn Fukkham**](https://github.com/darmonlyone)
