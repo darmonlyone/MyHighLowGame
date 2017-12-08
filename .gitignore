@@ -8,5 +8,6 @@ build.xml
 manifest.mf
 window_lan.xml
 
+*.rar
 *.zip
 *.psd
