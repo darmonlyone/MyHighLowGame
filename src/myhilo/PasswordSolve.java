@@ -14,47 +14,47 @@ class PasswordSolve {
     
 //   private static String encryptedPassword;
 
-    public  boolean isHaveNumber(String what){
+    public  boolean isHaveNumber(String pass){
         try {
-			Integer.parseInt(what);
+			Integer.parseInt(pass);
 			return false;
 	} catch(NumberFormatException ex) {
 			return true;
 		}
     }
-    public  boolean isHaveLower(String what){
-        if(isHaveNumber(what)){
-            if(what.toLowerCase().equals(what))return false;
+    public  boolean isHaveLower(String pass){
+        if(isHaveNumber(pass)){
+            if(pass.toLowerCase().equals(pass))return false;
             else return true;
         }else
         return false;
     }
-    public  boolean isHaveUpper(String what){
-         if(isHaveNumber(what)){
-            if(what.toUpperCase().equals(what))return false;
+    public  boolean isHaveUpper(String pass){
+         if(isHaveNumber(pass)){
+            if(pass.toUpperCase().equals(pass))return false;
             else return true;
         }else
         return false;
     }
-     public  boolean isHaveLetter(String what){
-         if(isHaveLower(what)&&isHaveUpper(what))
+     public  boolean isHaveLetter(String pass){
+         if(isHaveLower(pass)&&isHaveUpper(pass))
              return true;
          else return false;
      }
-     public  boolean isHave6Letter(String what){
-         if(what.length()>=6)return true;
+     public  boolean isHave6Letter(String pass){
+         if(pass.length()>=6)return true;
          else return false;
      }
-     public  boolean isPasswordOkay(String what){
-         if(isHave6Letter(what)&&isHaveLetter(what))
+     public  boolean isPasswordOkay(String pass){
+         if(isHave6Letter(pass)&&isHaveLetter(pass))
              return true;
          else return false;
      }
-     public boolean verifyPassword(String what,String whatda) {
-		return BCrypt.checkpw(what, whatda);
+     public boolean verifyPassword(String pass,String passCheck) {
+		return BCrypt.checkpw(pass, passCheck);
 	}
-     public String letHash(String what){
-         return BCrypt.hashpw(what, BCrypt.gensalt());
+     public String letHash(String pass){
+         return BCrypt.hashpw(pass, BCrypt.gensalt());
          
      }
      
