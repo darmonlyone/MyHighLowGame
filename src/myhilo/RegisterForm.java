@@ -54,11 +54,11 @@ public class RegisterForm extends  javax.swing.JFrame {
             if(!solvePassword.isHave6Letter(what))
                 wrongText.setText("Password should more than 6 letter");
             else if(!solvePassword.isHaveLetter(what))
-                wrongText.setText("Please put some letter");
+                wrongText.setText("Please input some letter");
             else if(!solvePassword.isHaveUpper(what))
-                wrongText.setText("Please put some Upper letter");
+                wrongText.setText("Please input some Upper letter");
             else if(!solvePassword.isHaveLower(what))
-                wrongText.setText("Please put some Lower letter");
+                wrongText.setText("Please input some Lower letter");
             else wrongText.setText("Something went worng!!!");
             
             cautionsText.setForeground(Color.red);
@@ -289,12 +289,11 @@ public class RegisterForm extends  javax.swing.JFrame {
 
     private void cautionsTextMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cautionsTextMouseMoved
        cautionsText.setBackground(Color.red);
-       passwordAction.setText("Use at least 6 characters. Don’t \n" +
-                                "use a password too obvious like\n" +
-                                "your pet’s name. Use atleast \n" +
-                                "some number and also some  \n" +
-                                "alphabet with uppercase and \n" +
-                                "normalcase alphabet.");
+       passwordAction.setText("Use at least 6 characters. Don’t " +
+                                "use a password too obvious like " +
+                                "your pet’s name. You have to use at least " +
+                                "1 Capital letter and normal letter" +
+                                "");
        passwordAction.setVisible(true);
       
     }//GEN-LAST:event_cautionsTextMouseMoved
