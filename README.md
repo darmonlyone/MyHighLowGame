@@ -4,23 +4,31 @@ Software and Knowledge Engineering program, which this application is a project 
 
 **Table of Contents**
 - [What is Hilo?](#what-is-hilo-game)
-- [What I use in this application](#what-is-on-this-application)
+- [Why we make this game](#why-make-this-game)
+- [What I use in this application](#what-is-in-and-need-on-this-application)
 - [Main Features](#main-features)
 - [What is on this game](#play-the-game)
 - [How to get this game](#get-this-game)
-- [Why we make this game](#why-make-this-game)
 
 ## What is Hilo Game
 The main point of Hilo is the player guesses High or Low; win or loses depends on the outcome of the number but 
 in the future we will add more games to this application keeping the concept of High and Low. The new features that we add are similar to HiLow so you have more choices to play on this application.
    
    ![game](imageReadme/HighLow.jpg)
+
+## Why Make This Game
+The application is made for an OOP project in part of Software and Knowledge Engineering (Kasetsart University). We make
+the application to show how much we can do from learning in this course. We use many things from this course to write the
+application like using an Array, ArrayList, Method, Class, FileLoader, FileWriter or even a basic programing.
+
+### Why Hilo Game
+I choose a HiLo game because I saw many people like to play gambling game at the free time. Didn't play for money, but just play 
+for fun. So I make this game to respond those of people. **We hope very much for your guy to enjoy this application**.
     
-## What is on this application
+## What is in and need on this application
  - **fileLoader folder** contain videos advertise and file that save username and password for login this application.
  - **lib folder** contain jar file that need it on this application.
  - **src folder** contain java file and image that use on this application.
- - **MyHiLO.jar** for running this application.
  
    ![whatOn](imageReadme/what_on.jpg)
    
@@ -97,12 +105,6 @@ Suppose you have downloaded the files to a directory named /home/username/games.
 cmd>  java -cp '/home/username/games/*' myhilo.MainRun
 ```
 You must write the directory (path) in quotes to prevent processing of "\*" by the shell interpretter.
-
-## Why Make This Game
-The application is made for an OOP project in part of Software and Knowledge Engineering (Kasetsart University). We make
-the application to show how much we can do from learning in this course. We use many things from this course to write the
-application like using an Array, ArrayList, Method, Class, FileLoader, FileWriter or even a basic programing. **We hope
-very much for your guy to enjoy this application.**
 
 ## Contributors
 - [**Manusporn Fukkham**](https://github.com/darmonlyone)
