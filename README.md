@@ -4,8 +4,8 @@ Software and Knowledge Engineering program, which this application is a project 
 
 **Table of Contents**
 - [What is Hilo?](#what-is-hilo-game)
-- [Why we make this game](#why-make-this-game)
-- [What I use in this application](#what-is-in-and-need-on-this-application)
+- [Why I make this game](#why-make-this-game)
+- [What I use in this application](#how-is-become-this-application)
 - [Main Features](#main-features)
 - [What is on this game](#play-the-game)
 - [How to get this game](#get-this-game)
@@ -22,10 +22,10 @@ the application to show how much we can do from learning in this course. We use 
 application like using an Array, ArrayList, Method, Class, FileLoader, FileWriter or even a basic programing.
 
 ### Why Hilo Game
-I choose a HiLo game because I saw many people like to play gambling game at the free time. Didn't play for money, but just play 
+I choose a HiLo game because I saw many people like to play gambling game at the free time. Didn't play for gamble, but just play 
 for fun. So I make this game to respond those of people. **We hope very much for your guy to enjoy this application**.
     
-## What is in and need on this application
+## How is become this application
  - **fileLoader folder** contain videos advertise and file that save username and password for login this application.
  - **lib folder** contain jar file that need it on this application.
  - **src folder** contain java file and image that use on this application.
@@ -42,7 +42,7 @@ for fun. So I make this game to respond those of people. **We hope very much for
  
  ## Play the Game
  ### Login
- Login with your own account for remembering User and amount of the money that you have play on this application..
+ Login with your own account for remembering User and amount of the money that you have play on this application.
  
    ![login](imageReadme/login.png)
  ### Register
@@ -50,6 +50,7 @@ for fun. So I make this game to respond those of people. **We hope very much for
  Every time you have register on this application your account will got money on the account 2000 bath.
     
    ![register](imageReadme/register.png)
+   ![registerr](imageReadme/FileLoader.jpg)
  ### Choosing Game
  You can choose the game to play with all the game is keeping concept High and Low.
  
