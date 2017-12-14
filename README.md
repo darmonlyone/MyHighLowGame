@@ -4,6 +4,7 @@ Software and Knowledge Engineering program, which this application is a project 
 
 **Table of Contents**
 - [What is Hilo?](#what-is-hilo-game)
+- [What I use in this application](#what-is-on-this-application)
 - [Main Features](#main-features)
 - [What is on this game](#play-the-game)
 - [How to get this game](#get-this-game)
@@ -13,9 +14,16 @@ Software and Knowledge Engineering program, which this application is a project 
 The main point of Hilo is the player guesses High or Low; win or loses depends on the outcome of the number but 
 in the future we will add more games to this application keeping the concept of High and Low. The new features that we add are similar to HiLow so you have more choices to play on this application.
    
-   ![game](src/imageReadme/HighLow.jpg)
+   ![game](imageReadme/HighLow.jpg)
     
+## What is on this application
+ - **fileLoader folder** contain videos advertise and file that save username and password for login this application.
+ - **lib folder** contain jar file that need it on this application.
+ - **src folder** contain java file and image that use on this application.
+ - **MyhiLO.jar** for running this application.
  
+   ![whatOn](imageReadme/what_on.jpg)
+   
  ## Main Features
  - [**Login Form**](#login) with remembers an account User, Password and Amount of the Money in game
  - [**Register Form**](#register) to create a new account for playing this game
@@ -28,32 +36,32 @@ in the future we will add more games to this application keeping the concept of 
  ### Login
  Login with your own account for remembering User and amount of the money that you have play on this application..
  
-   ![login](src/imageReadme/login.png)
+   ![login](imageReadme/login.png)
  ### Register
  Register for create new account for palying on this application.
  Every time you have register on this application your account will got money on the account 2000 bath.
     
-   ![register](src/imageReadme/register.png)
+   ![register](imageReadme/register.png)
  ### Choosing Game
  You can choose the game to play with all the game is keeping concept High and Low.
  
-   ![choiceGame](src/imageReadme/gamePlay.png)
+   ![choiceGame](imageReadme/gamePlay.png)
  ### Hilo Dice Game
  This is a Hilo dices game with you can choose the face of dice to bet on it which need one of the three dice to face up what you choosing.
  Also have feature to choose witch depend on how many faces of dice need to face up the same as you bet.
  
-   ![hoetoplay](src/imageReadme/howto1.png)
-   ![hoetoplay2](src/imageReadme/howto2.png)
-   ![HighlowDice](src/imageReadme/HiloDiceGame.png)
+   ![hoetoplay](imageReadme/howto1.png)
+   ![hoetoplay2](imageReadme/howto2.png)
+   ![HighlowDice](imageReadme/HiloDiceGame.png)
    
   ### Hilo Card Game
   This is a Hilo card game with need to play card game with bot. You and bot will get one card (cannot see
   each other). You have ability to choose new card, let bot get a new card or both get new card. Each ability
   will count that you can use on each round. To win this game you need to have card, witch have a bigger card point than 
   bot.
-  ![howtoplay3](src/imageReadme/howto3.png)
-  ![howtoplay4](src/imageReadme/howto4.png)
-  ![HighLowCard](src/imageReadme/gamecardPlay.png)
+  ![howtoplay3](imageReadme/howto3.png)
+  ![howtoplay4](imageReadme/howto4.png)
+  ![HighLowCard](imageReadme/gamecardPlay.png)
     
 ## Get This Game
 #### Download
@@ -73,17 +81,18 @@ Download these files to a directory on your computer. Strongly recommended that 
 **TODO** Put all the files the user needs in a directory named "dist"
 
 #### Using Apple
-   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases)** >> *HighLow.zip*
+   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases/download/1.2.1/HighLow.zip)** >> *HighLow.zip*
    - Extract HighLow.zip file 
    - **Run** MyHiLO.jar
      
 #### Using Windows
-   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases)** >> *HighLow_win.rar*   
+   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases/download/1.2.1/HighLow_win.rar)** >> *HighLow_win.rar*   
    - Extract HighLow_win.rar file 
    - **Run** MyHiLO.exe
      
 #### Any Operating System
 Suppose you have downloaded the files to a directory named /home/username/games. Then add these files to classpath and run the main class of game using:
+
 ```shell
 cmd>  java -cp '/home/username/games/*' myhilo.MainRun
 ```
