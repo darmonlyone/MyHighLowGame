@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>C:\Users\hp\Documents\NetBeansProjects\HighLow\MyHiLO.jar</jar>
-  <outfile>C:\Users\hp\Documents\NetBeansProjects\HighLow\window\HighLow.exe</outfile>
+  <outfile>C:\Users\hp\Documents\NetBeansProjects\HighLow\HighLow.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
