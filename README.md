@@ -5,7 +5,7 @@ Software and Knowledge Engineering program, which this application is a project 
 **Table of Contents**
 - [What is Hilo?](#what-is-hilo-game)
 - [Why I make this game](#why-make-this-game)
-- [What I use in this application](#how-is-become-this-application)
+- [What I use in this application](#the-application)
 - [Main Features](#main-features)
 - [What is on this game](#play-the-game)
 - [How to get this game](#get-this-game)
@@ -25,10 +25,10 @@ application like using an Array, ArrayList, Method, Class, FileLoader, FileWrite
 I choose a HiLo game because I saw many people like to play gambling game at the free time. Didn't play for gamble, but just play 
 for fun. So I make this game to respond those of people. **We hope very much for your guy to enjoy this application**.
     
-## How is become this application
- - **fileLoader folder** contain videos advertise and file that save username and password for login this application.
- - **lib folder** contain jar file that need it on this application.
- - **src folder** contain java file and image that use on this application.
+## The application
+ - **FileLoader package** contain videos advertise and file that save username and password for login this application.
+ - **lib package** contain jar file that need it on this application.
+ - **MyHiLO.jar** is a run file that contain java file and image that use on this application.
  
    ![whatOn](imageReadme/what_on.jpg)
    
