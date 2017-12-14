@@ -20,7 +20,7 @@ in the future we will add more games to this application keeping the concept of 
  - **fileLoader folder** contain videos advertise and file that save username and password for login this application.
  - **lib folder** contain jar file that need it on this application.
  - **src folder** contain java file and image that use on this application.
- - **MyhiLO.jar** for running this application.
+ - **MyHiLO.jar** for running this application.
  
    ![whatOn](imageReadme/what_on.jpg)
    
