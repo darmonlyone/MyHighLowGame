@@ -4,6 +4,7 @@ test/
 build/
 nbproject/
 
+launch4j.log
 build.xml
 manifest.mf
 window_lan.xml
