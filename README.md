@@ -58,20 +58,21 @@ for fun. So I make this game to respond those of people. **We hope very much for
  ### Hilo Dice Game
  This is a Hilo dices game with you can choose the face of dice to bet on it which need one of the three dice to face up what you choosing.
  Also have feature to choose witch depend on how many faces of dice need to face up the same as you bet.
- 
+  
+   ![HighlowDice](imageReadme/HiloDiceGame.png)
    ![hoetoplay](imageReadme/howto1.png)
    ![hoetoplay2](imageReadme/howto2.png)
-   ![HighlowDice](imageReadme/HiloDiceGame.png)
    
   ### Hilo Card Game
   This is a Hilo card game with need to play card game with bot. You and bot will get one card (cannot see
   each other). You have ability to choose new card, let bot get a new card or both get new card. Each ability
   will count that you can use on each round. To win this game you need to have card, witch have a bigger card point than 
   bot.
+  
+  ![HighLowCard](imageReadme/gamecardPlay.png)
   ![howtoplay3](imageReadme/howto3.png)
   ![howtoplay4](imageReadme/howto4.png)
-  ![HighLowCard](imageReadme/gamecardPlay.png)
-    
+  
 ## Get This Game
 #### Download
 
