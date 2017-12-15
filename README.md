@@ -31,6 +31,7 @@ for fun. So I make this game to respond those of people. **We hope very much for
  - **MyHiLO.jar** is a run file that contain java file and image that use on this application.
  
    ![whatOn](imageReadme/what_on.jpg)
+   ![usernamepassword](imageReadme/FileLoader.jpg)
    
  ## Main Features
  - [**Login Form**](#login) with remembers an account User, Password and Amount of the Money in game
@@ -50,7 +51,7 @@ for fun. So I make this game to respond those of people. **We hope very much for
  Every time you have register on this application your account will got money on the account 2000 bath.
     
    ![register](imageReadme/register.png)
-   ![registerr](imageReadme/FileLoader.jpg)
+
  ### Choosing Game
  You can choose the game to play with all the game is keeping concept High and Low.
  
