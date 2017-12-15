@@ -91,12 +91,12 @@ Download these files to a directory on your computer. Strongly recommended that 
 **TODO** Put all the files the user needs in a directory named "dist"
 
 #### Using Apple
-   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases/download/1.2.2/HighLow.zip)** >> *HighLow.zip*
+   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases/download/1.2.3/HighLow.zip)** >> *HighLow.zip*
    - Extract HighLow.zip file 
    - **Run** MyHiLO.jar
      
 #### Using Windows
-   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases/download/1.2.2/HighLow_win.rar)** >> *HighLow_win.rar*   
+   **[Download](https://github.com/darmonlyone/MyHighLowGame/releases/download/1.2.3/HighLow_win.rar)** >> *HighLow_win.rar*   
    - Extract HighLow_win.rar file 
    - **Run** MyHiLO.exe
      
