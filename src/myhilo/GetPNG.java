@@ -1,9 +1,11 @@
+
+package myhilo;
 /*
 * This is for returning a string that tell the place to get PNG file to 
 * use on the application.
+* 
+* @author Manusporn Fukkham
 */
-package myhilo;
-
 public class GetPNG {
 	
 	// name of the card

@@ -1,7 +1,4 @@
-/*
- * FileSet class use for read file from FileLoader package.
- * Set Username Password and Money to use on other class.
- */
+
 package myhilo;
 
 import java.io.File;
@@ -14,7 +11,9 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
+ * FileSet class use for read file from FileLoader package.
+ * Set Username Password and Money to use on other class.
+ * 
  * @author Manusporn Fukkham
  */
 public class FileSet {

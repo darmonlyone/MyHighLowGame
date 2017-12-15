@@ -1,7 +1,7 @@
 /*
- * AdvertiseController class for controlling fxml file.
- * Random a Videos for opening as advertise.
- * Advertise videos on advertiseVideos package
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package myhilo;
 
@@ -22,7 +22,9 @@ import myhilo.FileSet;
 
 /**
  * FXML Controller class
- *
+ ** AdvertiseController class for controlling fxml file.
+ * Random a Videos for opening as advertise.
+ * Advertise videos on advertiseVideos package
  * @author hp
  */
 public class AdvertiseController implements Initializable {

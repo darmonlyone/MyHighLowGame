@@ -1,6 +1,7 @@
 /*
- * This class use for show how to use application on each game
- * also tell how to play the game.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package myhilo;
 
@@ -8,8 +9,10 @@ import java.awt.Color;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 /**
- *
- * @author hp
+ * This class use for show how to use application on each game
+ * also tell how to play the game
+ * 
+ * @author Manusporn Fukkham
  */
 public class HowToPlay extends javax.swing.JFrame {
 

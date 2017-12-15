@@ -1,13 +1,11 @@
-/*
- * This class use for check password that are 
- * strong password enough to regis
- */
+
 package myhilo;
 
 import java.util.Scanner;
 import org.mindrot.jbcrypt.BCrypt;
 /**
- *
+ * This class use for check password that are 
+ * strong password enough to regis on this application.
  * @author Manusporn Fukkham
  */
 class PasswordSolve {

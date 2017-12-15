@@ -1,12 +1,11 @@
-/*
- * This class use for checking the dice and FaceChooser on MyDiceGame class.
- */
+
 package myhilo;
 import java.util.*;
 
 
 /**
- *
+ * This class use for checking the dice and FaceChooser on MyDiceGame class.
+ * 
  * @author Manusporn Fukkham
  */
 public class GetDiceCorrect {

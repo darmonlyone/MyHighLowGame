@@ -1,7 +1,7 @@
 /*
- * For running FXML file
- * Run as "Advertise.fxml" which use AdvertiseController class 
- * to run Application.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package myhilo;
 
@@ -13,7 +13,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
+ *For running FXML file
+ * Run as "Advertise.fxml" which use AdvertiseController class 
+ * to run Application.
  * @author hp
  */
 public class AdvertiseMain extends Application {

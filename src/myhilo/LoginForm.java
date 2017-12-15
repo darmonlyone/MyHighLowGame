@@ -1,5 +1,7 @@
 /*
- * Login form use for login to play on Hilo Game with your own account.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package myhilo;
 import java.util.List;
@@ -7,7 +9,8 @@ import java.awt.Color;
 import java.awt.event.*;
 import java.io.PrintStream;
 /**
- *
+ * Login form use for login to play on Hilo Game with your own account.
+ * 
  * @author Manusporn Fukkham
  */
 public class LoginForm extends javax.swing.JFrame {

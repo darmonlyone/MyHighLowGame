@@ -1,5 +1,7 @@
 /*
- * This class for regis an useraccount to play on Hilo application.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package myhilo;
 import java.awt.Color;
@@ -8,7 +10,8 @@ import java.io.*;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
- *
+ * This class for regis an useraccount to play on Hilo application.
+ * 
  * @author Manusporn Fukkham
  */
 public class RegisterForm extends  javax.swing.JFrame {

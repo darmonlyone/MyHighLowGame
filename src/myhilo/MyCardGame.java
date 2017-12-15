@@ -1,6 +1,7 @@
 /*
- * This class for playing CardGame which will get your acount use
- * and set money all the time you finished a game.a
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package myhilo;
 
@@ -15,7 +16,9 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 
 /**
- *
+ * This class for playing CardGame which will get your acount use
+ * and set money all the time you finished a game.a
+ * 
  * @author Maunsporn Fukkham
  */
 public class MyCardGame extends javax.swing.JFrame {
