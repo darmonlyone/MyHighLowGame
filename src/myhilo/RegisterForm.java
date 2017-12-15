@@ -56,13 +56,7 @@ public class RegisterForm extends  javax.swing.JFrame {
             wrongText.setForeground(Color.red);
             if(!solvePassword.isHave6Letter(what))
                 wrongText.setText("Password should more than 6 letter");
-            else if(!solvePassword.isHaveLetter(what))
-                wrongText.setText("Please put some number and letter");
-            else if(!solvePassword.isHaveUpper(what))
-                wrongText.setText("Please input some Upper letter");
-            else if(!solvePassword.isHaveLower(what))
-                wrongText.setText("Please input some Lower letter");
-            else wrongText.setText("Something went worng!!!");
+            else wrongText.setText("Please put some number and letter with some upper case");
             
             cautionsText.setForeground(Color.red);
             cautionsText.setFont(new java.awt.Font("Tahoma", 0, 14)); 
@@ -203,14 +197,14 @@ public class RegisterForm extends  javax.swing.JFrame {
         });
         getContentPane().add(passWordGetText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 270, 40));
 
-        wrongText.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        wrongText.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         wrongText.setForeground(new java.awt.Color(255, 255, 255));
         wrongText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         wrongText.setText("Retype password are not correct");
         wrongText.setBorder(null);
         wrongText.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         wrongText.setFocusable(false);
-        getContentPane().add(wrongText, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 440, -1));
+        getContentPane().add(wrongText, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 440, -1));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imageStart/register.png"))); // NOI18N
         background.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
