@@ -6,6 +6,7 @@ import org.mindrot.jbcrypt.BCrypt;
 /**
  * This class use for check password that are 
  * strong password enough to regis on this application.
+ * 
  * @author Manusporn Fukkham
  */
 class PasswordSolve {
@@ -22,31 +23,24 @@ class PasswordSolve {
     }
     public  boolean isHaveLower(String pass){
         if(isHaveNumber(pass)){
-            if(pass.toLowerCase().equals(pass))return false;
-            else return true;
+            return !pass.toLowerCase().equals(pass);
         }else
         return false;
     }
     public  boolean isHaveUpper(String pass){
          if(isHaveNumber(pass)){
-            if(pass.toUpperCase().equals(pass))return false;
-            else return true;
+             return !pass.toUpperCase().equals(pass);
         }else
         return false;
     }
      public  boolean isHaveLetter(String pass){
-         if(isHaveLower(pass)&&isHaveUpper(pass))
-             return true;
-         else return false;
+        return isHaveLower(pass)&&isHaveUpper(pass);
      }
      public  boolean isHave6Letter(String pass){
-         if(pass.length()>=6)return true;
-         else return false;
+        return pass.length()>=6;
      }
      public  boolean isPasswordOkay(String pass){
-         if(isHave6Letter(pass)&&isHaveLetter(pass))
-             return true;
-         else return false;
+        return isHave6Letter(pass)&&isHaveLetter(pass);
      }
      public boolean verifyPassword(String pass,String passCheck) {
 		return BCrypt.checkpw(pass, passCheck);

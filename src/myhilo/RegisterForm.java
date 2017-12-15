@@ -57,7 +57,7 @@ public class RegisterForm extends  javax.swing.JFrame {
             if(!solvePassword.isHave6Letter(what))
                 wrongText.setText("Password should more than 6 letter");
             else if(!solvePassword.isHaveLetter(what))
-                wrongText.setText("Please input some letter");
+                wrongText.setText("Please put some number and letter");
             else if(!solvePassword.isHaveUpper(what))
                 wrongText.setText("Please input some Upper letter");
             else if(!solvePassword.isHaveLower(what))
